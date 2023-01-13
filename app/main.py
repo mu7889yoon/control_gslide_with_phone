@@ -8,7 +8,8 @@ app = FastAPI()
 
 origins = [
     "http://localhost",
-    conf.phone_ip
+    conf.phone_ip,
+    '192.168.64.7',
 ]
 
 app.add_middleware(
