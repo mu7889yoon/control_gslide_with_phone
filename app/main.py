@@ -9,7 +9,6 @@ app = FastAPI()
 origins = [
     "http://localhost",
     conf.phone_ip,
-    '192.168.64.7',
 ]
 
 app.add_middleware(
@@ -22,12 +21,12 @@ app.add_middleware(
 
 @app.get("/next")
 async def next():
-    # pyautogui.press('right')
+    pyautogui.press('right')
     print("next")
     return {"message": "Next"}
 
 @app.get("/prev")
 async def prev():
-    # pyautogui.press('left')
+    pyautogui.press('left')
     print("prev")
     return {"message": "Prev"}
